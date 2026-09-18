@@ -1,0 +1,150 @@
+/* Feuille de style IdoLogis v1 */
+
+/* Font */
+
+/* Margarine */
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+
+/* Formats globaux */
+
+a {
+	color:#252D8F;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+body {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	background-color:#000000;
+}
+
+/* Classes */
+
+div.accueil {
+	width:790px;
+	margin: 20px auto auto auto;
+	padding:5px;
+	border:1px solid #FFFFFF;	
+	color:#FFFFFF;
+}
+div.conteneur {
+	width:790px;
+	margin: 20px auto auto auto;
+	padding:5px;
+	background-color:#FFFFFF;
+	border:1px solid #F9DD0F;
+}
+img.bien {
+	width:500px;
+}
+img.menu {
+	border:0;
+}
+p.centre {
+	text-align:center;
+}
+p.coord {
+	text-align:center;
+	color:#FFFFFF;
+	font-size:12px;
+	font-style:italic;
+}
+table.liste {
+	width:700px;
+	margin:auto;
+	border:1px solid #000000;
+	text-align:center;
+}
+table.liste  th{
+	background-color:#BF3413;
+	color:#FFFFFF;
+}
+
+/* Formats indépendants */
+
+/* a#menu_accueil {
+	display:block;
+	float:left;
+	width:144px;
+	height:50px;
+	background-image:url(img/accueil1.png);
+}
+a#menu_accueil:hover {
+	background-image:url(img/accueil2.png);
+}
+a#menu_contact {
+	display:block;
+	float:left;
+	width:144px;
+	height:50px;
+	background-image:url(img/contact1.png);
+}
+a#contact:hover {
+	background-image:url(img/contact2.png);
+}
+a#menu_locations {
+	display:block;
+	float:left;
+	width:144px;
+	height:50px;
+	background-image:url(img/locations1.png);
+}
+a#menu_locations:hover {
+	background-image:url(img/locations2.png);
+}
+a#menu_ventes {
+	display:block;
+	float:left;
+	width:144px;
+	height:50px;
+	background-image:url(img/ventes1.png);
+}
+a#menu_ventes:hover {
+	background-image:url(img/ventes2.png);
+} */
+
+p.bandeau a {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+	font-family: "Margarine", sans-serif;
+	font-size: 32px;
+    color: white;
+}
+
+p.bandeau a:hover {
+    text-decoration: none;
+    color: #F9DD0F;
+}
+
+
+div#bandeau {
+	position:relative;
+	width:800px;
+	height:100px;
+	margin:auto;
+}
+div#bandeau_coord {
+	position:absolute;
+	top:0px;
+	left:224px;
+	width:576px;
+	height:50px;
+}
+div#bandeau_logo {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:224px;
+	height:100px;
+}
+div#bandeau_menu {
+	position:absolute;
+	top:50px;
+	left:224px;
+	width:576px;
+	height:50px;
+}
