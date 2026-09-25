@@ -4,6 +4,11 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 header {
     background-color: #333;
     color: #fff;
@@ -46,19 +51,27 @@ nav .élément-navigation:hover {
     color: #2C2CF2;
 }
 
+nav .élément-navigation.select {
+    color: #2C2CF2;
+    border-bottom: 3px solid #2C2CF2;
+}
+
 
 /* Style pour le contenu principal */
 
 
 main .contenu-accueil {
     display: flex;
+    align-items: stretch;
     margin-bottom: 20px;
     padding: 10px;
     background-color: #66ADF5;
+    height: fit-content;
 }
 
 main .textes-accueil {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     display: inline-block;
     text-align: center;
     margin-right: 20px;
@@ -94,17 +107,239 @@ main .coordonnees .email {
 }
 
 main .image-accueil {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
     margin: 10px;
-    width: 100%;
     height: auto;
+    align-self: stretch;
     object-fit: cover;
-    aspect-ratio: initial;
     border-radius: 5px;
 }
 
 
+main .liste-biens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
 
+main .liste-biens h2 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 3em;
+}
+
+main .liste-biens p {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+main .liste-biens .bien {
+    display: inline-block;   
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+main .liste-biens .bien a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main .liste-biens .bien:hover {
+    transform: translateY(-5px);
+}
+
+main .liste-biens .bien img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+main .liste-biens .bien h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+main .liste-biens .bien p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #666;
+}
+
+main .liste-biens .bien .prix {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+}
+
+
+
+/* Style pour la carte Google Maps */
+
+.map {
+    margin: 20px;
+    text-align: center;
+}
+
+.map h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.map p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.map iframe {
+    width: 1000px;
+    height: 500px;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+/* Style pour la page de présentation d'un bien */
+
+main .presentation-bien {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #66ADF5;
+    height: fit-content;
+}
+
+main .textes-presentation-bien {
+    flex: 1 1 0;
+    min-width: 0;
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main .retour {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 10px 0;
+    font-size: 1.2em;
+    color: #000;
+    text-decoration: none;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+main .retour .material-symbols-outlined {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+main .retour:hover {
+    color: #2C2CF2;
+}
+
+main .textes-presentation-bien h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+main .textes-presentation-bien p {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+main .image-presentation-bien {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+    margin: 10px;
+    height: auto;
+    align-self: stretch;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+main .liste-caracteristiques {
+    margin: 25px auto;
+    max-width: 600px;
+    text-align: left;
+    font-size: 1.15em;
+}
+
+main .liste-caracteristiques div {
+    display: grid;
+    grid-template-columns: minmax(170px, 1fr) 1.2fr;
+    gap: 20px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+main .liste-caracteristiques div:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+main .liste-caracteristiques dt {
+    font-weight: bold;
+}
+
+main .liste-caracteristiques .material-symbols-outlined {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+main .liste-caracteristiques dd {
+    margin: 0;
+}
+
+main .textes-presentation-bien .prix {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000;
+}
+
+@media (max-width: 600px) {
+    main .liste-caracteristiques {
+        font-size: 1em;
+    }
+
+    main .liste-caracteristiques div {
+        grid-template-columns: minmax(120px, 1fr) 1.2fr;
+        gap: 12px;
+        padding: 10px;
+    }
+}
+
+
+main .description-bien {
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+main .description-bien h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+main .description-bien p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
 
 
 /* Style pour le pied de page */
